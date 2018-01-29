@@ -21,7 +21,8 @@ def index(request):
     return render(request,'index.html')
 
 urlpatterns = [
+    path('', index),
     path('admin/', admin.site.urls),
     path('login/', include('login.urls')),
-    path('',index)
+    path('task/',include('task.urls')),
 ]
