@@ -417,60 +417,72 @@
                                 <h4 class="modal-title">基础架构变更申请单</h4>
                             </div>
                             <div class="modal-body">
-                                <form class="form-horizontal" id="testform">
+                                <form class="form-horizontal" id="confForm">
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">厂区现场运维人员</label>
-                                        <div class="col-sm-4"><input type="text" class="form-control conf"
-                                                                     placeholder="">
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" name="ops_name" placeholder="">
                                         </div>
                                         <label class="col-sm-2 control-label">联系方式</label>
-                                        <div class="col-sm-4"><input type="text" class="form-control conf"
-                                                                     placeholder="">
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" name="ops_tel" placeholder="">
                                         </div>
                                     </div>
                                     <div class="hr-line-dashed"></div>
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">供应商人员</label>
-                                        <div class="col-sm-4"><input type="text" class="form-control conf"
-                                                                     placeholder="公司-工程师姓名"></div>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" name="supplier_name"
+                                                   placeholder="公司-工程师姓名">
+                                        </div>
                                         <label class="col-sm-2 control-label">联系方式</label>
-                                        <div class="col-sm-4"><input type="text" class="form-control conf"
-                                                                     placeholder=""></div>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" name="supplier_tel" placeholder="">
+                                        </div>
                                     </div>
                                     <div class="hr-line-dashed"></div>
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">设备所在厂区</label>
-                                        <div class="col-sm-4"><input type="text" class="form-control conf"
-                                                                     placeholder=""></div>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" name="device_factory"
+                                                   placeholder="">
+                                        </div>
                                         <label class="col-sm-2 control-label">设备位置</label>
-                                        <div class="col-sm-4"><input type="text" class="form-control conf"
-                                                                     placeholder=""></div>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" name="device_location"
+                                                   placeholder="">
+                                        </div>
                                     </div>
                                     <div class="hr-line-dashed"></div>
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">设备名称</label>
-                                        <div class="col-sm-4"><input type="text" class="form-control conf"
-                                                                     placeholder=""></div>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" name="device_name" placeholder="">
+                                        </div>
                                         <label class="col-sm-2 control-label">设备IP</label>
-                                        <div class="col-sm-4"><input type="text" class="form-control conf"
-                                                                     placeholder=""></div>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" name="device_ip" placeholder="">
+                                        </div>
                                     </div>
                                     <div class="hr-line-dashed"></div>
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">变更申请人</label>
-                                        <div class="col-sm-4"><input type="text" class="form-control conf"
-                                                                     placeholder=""></div>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" name="applicant_name"
+                                                   placeholder="">
+                                        </div>
                                         <label class="col-sm-2 control-label">是否更换新增硬件</label>
-                                        <div class="col-sm-4"><input type="text" class="form-control conf"
-                                                                     placeholder=""></div>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" name="device_add" placeholder="">
+                                        </div>
                                     </div>
                                     <div class="hr-line-dashed"></div>
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">变更发起日期</label>
                                         <div class="col-sm-4">
                                             <div class="input-group date form_datetime">
-                                                <input class="form-control conf" type="text" value="" readonly
-                                                       placeholder="">
+                                                <input class="form-control" name="application_date" type="text" value=""
+                                                       readonly placeholder="">
                                                 <span class="input-group-addon">
                                                     <span class="glyphicon glyphicon-remove"></span>
                                                 </span>
@@ -482,8 +494,8 @@
                                         <label class="col-sm-2 control-label">变更结束日期</label>
                                         <div class="col-sm-4">
                                             <div class="input-group date form_datetime">
-                                                <input class="form-control conf" type="text" value="" readonly
-                                                       placeholder="">
+                                                <input class="form-control" type="text" value="" readonly
+                                                       name="end_date" placeholder="">
                                                 <span class="input-group-addon">
                                                     <span class="glyphicon glyphicon-remove"></span>
                                                 </span>
@@ -497,28 +509,32 @@
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">变更影响范围</label>
                                         <div class="col-sm-10">
-                                            <textarea class="form-control conf" rows="5" placeholder=""></textarea>
+                                            <textarea class="form-control" rows="5" name="change_scope"
+                                                      placeholder=""></textarea>
                                         </div>
                                     </div>
                                     <div class="hr-line-dashed"></div>
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">变更内容</label>
                                         <div class="col-sm-10">
-                                            <textarea class="form-control conf" rows="5" placeholder=""></textarea>
+                                            <textarea class="form-control" name="change_content" rows="5"
+                                                      placeholder=""></textarea>
                                         </div>
                                     </div>
                                     <div class="hr-line-dashed"></div>
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">业务测试方法</label>
                                         <div class="col-sm-10">
-                                            <textarea class="form-control conf" rows="3" placeholder=""></textarea>
+                                            <textarea class="form-control" rows="3" name="test_method"
+                                                      placeholder=""></textarea>
                                         </div>
                                     </div>
                                     <div class="hr-line-dashed"></div>
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">变更总结</label>
                                         <div class="col-sm-10">
-                                            <textarea class="form-control conf" rows="3" placeholder=""></textarea>
+                                            <textarea class="form-control" rows="3" name="change_summary"
+                                                      placeholder=""></textarea>
                                         </div>
                                     </div>
                                     <div class="hr-line-dashed"></div>
@@ -535,30 +551,38 @@
             </div>
         </div>
 
-        <div class="wrapper wrapper-content">
+        <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
-                <div class="col-md-12">
-                    <table id="table1">
-                        <thead>
-                        <th>厂区现场运维人员</th>
-                        <th>联系方式</th>
-                        <th>供应商人员</th>
-                        <th>联系方式</th>
-                        <th>设备所在厂区</th>
-                        <th>设备位置</th>
-                        <th>设备名称</th>
-                        <th>设备IP</th>
-                        <th>变更申请人</th>
-                        <th>是否更换新增硬件</th>
-                        <th>变更开始时间</th>
-                        <th>变更结束时间</th>
-                        <th>变更影响范围</th>
-                        <th>变更内容</th>
-                        <th>业务测试方法</th>
-                        <th>变更总结</th>
-                        </thead>
-
-                    </table>
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>基础架构变更记录</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="table-responsive">
+                                <table id="confTable">
+                                    <thead>
+                                    <th>厂区现场运维人员</th>
+                                    <th>联系方式</th>
+                                    <th>供应商人员</th>
+                                    <th>联系方式</th>
+                                    <th>设备所在厂区</th>
+                                    <th>设备位置</th>
+                                    <th>设备名称</th>
+                                    <th>设备IP</th>
+                                    <th>变更申请人</th>
+                                    <th>是否更换新增硬件</th>
+                                    <th>变更开始时间</th>
+                                    <th>变更结束时间</th>
+                                    <th>变更影响范围</th>
+                                    <th>变更内容</th>
+                                    <th>业务测试方法</th>
+                                    <th>变更总结</th>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -610,50 +634,90 @@
             todayBtn: true,
             todayHighlight: true
         });
-        $('#table1').bootstrapTable({
+        $('#confTable').bootstrapTable({
             url: 'get/',
-            columns: [{
-                field: 'ops_name',
-                title: '厂区现场运维人员'
-            }],
+            striped:true,
             undefinedText: '~',
-            striped: true
+            pagination: true,
+            columns: [
+                {
+                    field: 'ops_name',
+                    title: '厂区现场运维人员'
+                },
+                {
+                    field: 'ops_tel',
+                    title: '联系方式'
+                },
+                {
+                    field: 'supplier_name',
+                    title: '供应商人员'
+                },
+                {
+                    field: 'supplier_tel',
+                    title: '联系方式'
+                },
+                {
+                    field: 'device_factory',
+                    title: '设备所在厂区'
+                },
+                {
+                    field: 'device_location',
+                    title: '设备位置'
+                },
+                {
+                    field: 'device_name',
+                    title: '设备名称'
+                },
+                {
+                    field: 'device_ip',
+                    title: '设备IP'
+                },
+                {
+                    field: 'applicant_name',
+                    title: '变更申请人'
+                },
+                {
+                    field: 'device_add',
+                    title: '是否更换新增硬件'
+                },
+                {
+                    field: 'application_date',
+                    title: '变更开始时间'
+                },
+                {
+                    field: 'end_date',
+                    title: '变更结束时间'
+                },
+                {
+                    field: 'change_scope',
+                    title: '变更影响范围'
+                },
+                {
+                    field: 'change_content',
+                    title: '变更内容'
+                },
+                {
+                    field: 'test_method',
+                    title: '业务测试方法'
+                },
+                {
+                    field: 'change_summary',
+                    title: '变更总结'
+                }
+            ],
         });
         $('#subConfModal').on('click', function () {
-            var data = $("#testform").serializeArray();
-            alert(data)
-            {#            var results = [];#}
-            {#            $('.conf').each(function (key, value) {#}
-            {#                results[key] = $(value).val()#}
-            {#            });#}
-            {#            var data = {#}
-            {#                'ops_name': results[0],#}
-            {#                'ops_tel': results[1],#}
-            {#                'supplier_name': results[2],#}
-            {#                'supplier_tel': results[3],#}
-            {#                'device_factory': results[4],#}
-            {#                'device_name': results[5],#}
-            {#                'device_ip': results[6],#}
-            {#                'applicant_name': results[7],#}
-            {#                'device_add': results[8],#}
-            {#                'application_date': results[9],#}
-            {#                'end_date': results[10],#}
-            {#                'change_scope': results[11],#}
-            {#                'change_content': results[12],#}
-            {#                'test_method': results[13],#}
-            {#                'change_summary': results[14]#}
-            {#            };#}
-                        $.ajax({
-                            url: 'post/',
-                            type: 'POST',
-                            data: data,
-                            dataType: "text",
-                            success: function (data) {
-                                alert(data)
-                            },
-                            error: function (xhr, type) {
-                            }
-                        })
+            var data = $('#confForm').serializeArray();
+            $.ajax({
+                url: 'post/',
+                type: 'POST',
+                data: data,
+                dataType: "text",
+                success: function (data) {
+                },
+                error: function (xhr, type) {
+                }
+            })
         })
     });
 </script>
