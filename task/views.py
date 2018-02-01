@@ -5,21 +5,22 @@ from .models import Configuration
 import json
 from django.core import serializers
 from datetime import datetime, date
+from django.contrib.auth.decorators import login_required
 
 
 class JsonCustomEncoder(json.JSONEncoder):
     def default(self, field):
 
-        if isinstance(field, datetime.datetime):
+        if isinstance(field, datetime):
             return field.strftime('%Y-%m-%d %H:%M:%S')
-        elif isinstance(field, date.date):
+        elif isinstance(field, date):
             return field.strftime('%Y-%m-%d')
         else:
             return json.JSONEncoder.default(self, field)
 
-
+@login_required()
 def task(request):
-    return render(request, 'task/task.html')
+        return render(request, 'task/task.html')
 
 
 def task_get(request):
@@ -31,6 +32,7 @@ def task_get(request):
         tmp = str(tmp)
         result = result + tmp + ","
     result = eval(result)
+    result = { "data":result}
     result = json.dumps(result, cls=JsonCustomEncoder)
     return HttpResponse(result, content_type="application/json")
 

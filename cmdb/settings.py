@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'task.apps.TaskConfig'
+    'task'
 ]
 
 MIDDLEWARE = [
@@ -96,6 +96,13 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'login.views.ActiveDirectoryBackend'
+]
+
+LOGIN_URL = '/admin/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
